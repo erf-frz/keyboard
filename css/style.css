@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+*{
+    padding:0px;
+    border:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 20px;
+    font-family: 'Chelsea Market', cursive;
+}
+
+
+h1{
+    padding-top:3%;
+    color:#01b698;
+    border-bottom: 1px solid rgb(192, 192, 192);
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+h3{
+    margin-left: 20%;
+    margin-top:30px;
+}
+
+ul{
+    margin-top:30px;
+    margin-left: 25%;
+
+}
+
+ul li{
+    margin-bottom: 10px;
+}
+
+strong{
+    color: #01b698;
+}
+
+
+textarea{
+    position: absolute;
+    top: 140px;
+    right:50px;
+    width: 300px;
+    height:120px; 
+    border: 1px solid #01b698;
+
+}
+
+.keyboard{
+    position: fixed;
+    background-color: #01b698;
+    bottom: 0;
+    left:0;
+    width:100%;
+    padding:5px 0;
+    user-select: none;      /*if u double click it, it cant be highlighted*/
+    transition: bottom 0.4s;
+    
+
+}
+
+.keyboard__hidden{
+    bottom:-100%;
+}
+
+.keyboard__keys{
+    text-align: center;
+}
+
+.keyboard__key{
+    height:45px;
+    width:6%;
+    margin: 3px;
+    max-width: 90px;
+    border:none;
+    border-radius: 4px;
+    outline: none;
+    color:white;
+    background-color: rgba(255,255,255,0.2);
+    font-size: 1.05rem;
+    cursor: pointer;
+    /* in order to make the icon inside of it at a central position*/
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    /* in order to make the button with icon vertically align with a regular icon*/
+    vertical-align: top;
+    padding:0;
+
+    /*for the mobile devices remove the backgroung color of blue when tapping on it*/
+    -webkit-tap-highlight-color:transparent;
+
+    /*for positioning the capslock light later*/
+    position:relative;
+}
+
+.keyboard__key:hover{
+    background-color: rgba(255, 255, 255, 0.301);
+}
+
+.keyboard__key:active{
+    background-color: rgba(0,0,0,0.12);
+}
+
+.keyboard__key--wide{
+    width:12%;
+}
+
+.keyboard__key--extra-wide{
+    width:36%;
+    max-width: 500px;
+}
+
+.keyboard__key--activatable::after{
+    content:'';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color:rgba(0, 0, 0, 0.4); 
+    top:10px;
+    right: 10px;
+    
+}
+
+.keyboard__key--active::after{
+    background-color: rgb(52, 241, 52);
+}
+
+.keyboard__key--dark{
+    background-color:rgba(0, 0, 0, 0.25) ;
+}
+
